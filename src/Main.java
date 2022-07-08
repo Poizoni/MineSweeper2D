@@ -11,7 +11,7 @@ public class Main {
 
         String[][] mainField;
         mainField = createGrid();
-        System.out.println(Arrays.deepToString(mainField));
+        printGrid(mainField);
 
     }
     public static String[][] createGrid() {
@@ -22,6 +22,14 @@ public class Main {
             }
         }
         return grid;
+    }
+
+    public static void printGrid(String[][] arr) {
+        for(int p = 0; p < arr.length; p++) {
+            for(int h = 0; h < arr[p].length; h++)
+                System.out.print(arr[p][h] + " ");
+            System.out.println();
+        }
     }
 
     /*
